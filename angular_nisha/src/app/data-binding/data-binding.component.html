@@ -1,0 +1,18 @@
+<p>data-binding works!</p>
+
+<h2>{{interpolationData}}</h2>
+<button disabled={{btnStatus}}>Click</button>
+
+  <!-- imageUrl: String = '../../assets/Screenshot (15).png' -->
+  <img src={{imageUrl}}> 
+
+  <h1>Property binding</h1>
+<img [src]="imageUrl">
+<button [disabled]=btnStatus>Click</button>
+
+
+<button (click) ="changeTitle()">chenge </button>
+
+<input type="text" [(ngModel)] = "userName">
+
+<h3>welcome {{userName}}</h3>
