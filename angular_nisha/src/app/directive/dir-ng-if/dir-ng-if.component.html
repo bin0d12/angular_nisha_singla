@@ -1,0 +1,8 @@
+<p>dir-ng-if works!</p>
+
+<div *ngIf="isUserLogIn; else logout">
+    <p>welcome to the page</p>
+</div>
+<ng-template #logout>
+    <p>you are not login</p>
+</ng-template>

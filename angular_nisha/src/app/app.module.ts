@@ -5,11 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DirNgForComponent } from './directive/dir-ng-for/dir-ng-for.component';
+import { DirNgIfComponent } from './directive/dir-ng-if/dir-ng-if.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
+    DirNgForComponent,
+    DirNgIfComponent,
   ],
   imports: [
     BrowserModule,

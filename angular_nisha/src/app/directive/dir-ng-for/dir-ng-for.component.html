@@ -1,0 +1,26 @@
+<p>dir-ng-for works!</p>
+<div>
+    <table>
+        <tr *ngFor="let employee of employeeData">
+            <td>{{employee}}</td>
+        </tr>
+    </table>
+
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>index</th>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr *ngFor="let user of users; let i = index">
+            <td>{{i}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+        </tr>
+    </table>
+</div>
