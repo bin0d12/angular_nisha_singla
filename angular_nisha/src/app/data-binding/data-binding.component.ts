@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
-  templateUrl: './data-binding.component.html'
+  templateUrl: './data-binding.component.html',
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class DataBindingComponent implements OnInit {
   imageUrl: String = '../../assets/Screenshot (15).png'

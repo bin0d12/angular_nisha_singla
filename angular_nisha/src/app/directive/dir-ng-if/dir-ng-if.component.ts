@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirNgIfComponent implements OnInit {
   isUserLogIn: boolean = true;
+  showMsg: boolean = true;
+  hideMsg: boolean = true;
 
   constructor() { }
 

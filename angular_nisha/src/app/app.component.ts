@@ -17,19 +17,34 @@
 
 // all decorators are in angular is methods
 
-// this decorator is pre-defined from angular so you need to import the comppnent
+// this decorator is pre-defined from angular so you need to import the component
 
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 @Component({
   // each decorator will have certain metadata so that metadata you have to define with the help of 
   // property
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class AppComponent {
-  
+  private number: number = 123;
+  get counter(){
+    return this.number;
+  }
+  set counter(value){
+    this.number = value;
+  }
+  increment() : any {
+     this.counter++;
+
+  } 
+  decrement(){
+    this.counter--
+
+  } 
 }
 
 // import { Component } from '@angular/core';

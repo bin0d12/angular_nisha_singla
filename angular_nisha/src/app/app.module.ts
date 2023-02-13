@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirNgForComponent } from './directive/dir-ng-for/dir-ng-for.component';
 import { DirNgIfComponent } from './directive/dir-ng-if/dir-ng-if.component';
+import { LifeCycleHookPraticeComponent } from './life-cycle-hook-pratice/life-cycle-hook-pratice.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { EncapsualtionComponent } from './encapsualtion/encapsualtion.component';
+import { EncapsualtionChildComponent } from './encapsualtion-child/encapsualtion-child.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +19,11 @@ import { DirNgIfComponent } from './directive/dir-ng-if/dir-ng-if.component';
     DataBindingComponent,
     DirNgForComponent,
     DirNgIfComponent,
+    LifeCycleHookPraticeComponent,
+    ParentComponent,
+    ChildComponent,
+    EncapsualtionComponent,
+    EncapsualtionChildComponent,
   ],
   imports: [
     BrowserModule,

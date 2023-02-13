@@ -6,3 +6,14 @@
 <ng-template #logout>
     <p>you are not login</p>
 </ng-template>
+
+<div *ngIf="showMsg; else hideMsg">user add successfully</div>
+<ng-template #hideMsg>
+    this is else block
+</ng-template>
+
+<p>Hip             !</p>
+<ng-template>
+  <p>Hip       !</p>
+</ng-template>
+<p>Hooray!</p>
