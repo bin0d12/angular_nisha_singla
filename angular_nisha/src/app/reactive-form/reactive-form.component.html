@@ -1,0 +1,8 @@
+<p>reactive-form works!</p>
+
+<!-- <h1>{{}}</h1> -->
+<form [formGroup] ="loginForm" (ngSubmit) ="loginUser()">
+    <input type="text" formControlName="user" placeholder="enter name">
+    <input type="password" formControlName="password" placeholder="enter password">
+    <button>Login</button>
+</form>

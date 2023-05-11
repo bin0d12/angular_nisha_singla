@@ -1,0 +1,57 @@
+<label>
+    Enter Email:
+    <input type="email" [formControl] = "email">
+</label>
+<p>display Email {{email.value}}</p>
+<button (click) ="updateEmail()">click to update button</button>
+
+<form [formGroup]="userProfileForm" (ngSubmit)="onSubmit()">
+    <label for="">First Name:
+        <input type="text" formControlName="firstName">
+    </label>
+    <label for="">Last Name:
+        <input type="text" formControlName="lastName">
+    </label>
+    <label for="">Age:
+        <input type="text" formControlName="age">
+    </label>
+    <label for="">Email:
+        <input type="text" formControlName="email">
+    </label>
+    <button type="submit" [disabled]="!userProfileForm.valid">submit</button>
+</form>
+<div> Using form builder</div>
+
+<form [formGroup]="userProfileFormUsingFb" (ngSubmit)="onSubmitUsingFb()">
+    <label> First name
+        <input type="text" formControlName="firstName">
+    </label>
+    <label> last name
+        <input type="text" formControlName="lastName">
+    </label>
+    <div formGroupName="address">
+        <h2>address</h2>
+        <label> House no.
+            <input type="text" formControlName="houseNo">
+        </label>
+        <label> City:
+            <input type="text" formControlName="city">
+        </label>
+        <label> State:
+            <input type="text" formControlName="state">
+        </label>
+        <label> Pin:
+            <input type="text" formControlName="pin">
+        </label>
+    </div>
+    <div formArrayName="mobiles">
+        <h4>Enter mobile number</h4>
+        <button (click)="addNewMobile()"> add new mobile umber</button>
+        <div *ngFor="let mob of mobiles.controls; let i = index">
+            <label>mobile {{i + 1}}</label> 
+            <input type="text" [formControlName]="i">
+        </div>
+    </div>
+    <button type="submit" [disabled]="!userProfileFormUsingFb.valid">submit formBuilder</button>
+    <button (click)="updatePartial()">Update partial button</button>
+</form>
